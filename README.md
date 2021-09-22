@@ -1,5 +1,7 @@
 # Frontend Mentor - FAQ accordion card
 
+👋[Preview site](https://maym42.github.io/faq-accordion-card-main/)
+
 ![Design preview for the FAQ accordion card coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
