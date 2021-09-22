@@ -1,0 +1,291 @@
+    @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+     :root {
+        /*#### colors ####*/
+        /*Text*/
+        --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+        --Soft-red: hsl(14, 88%, 65%);
+        /*Gradient*/
+        --Soft-violet: hsl(273, 75%, 66%);
+        --Soft-blue: hsl(240, 73%, 65%);
+        /*Text 2*/
+        --Very-dark-grayish-blue: hsl(237, 12%, 33%);
+        --Dark-grayish-blue: hsl(240, 6%, 50%);
+        /*Dividers*/
+        --Light-grayish-blue: hsl(240, 5%, 91%);
+        /*#### sizes ####*/
+        --radius: 20px;
+        /*1vh = 8.12px*/
+        --one-vh: 7.68;
+        /*1vw = 3.75px*/
+        --one-vw: 3.75;
+        /*Desktop*/
+        /*1vw = 14.4px*/
+        --one-vw-desktop: 14.4;
+        /*1vh = 7.68px*/
+        --one-vh-desktop: 7.68;
+    }
+    /*rest*/
+    
+    body,
+    figure {
+        margin: 0;
+    }
+    
+    body {
+        /*BG*/
+        background-image: linear-gradient(var(--Soft-violet) 20%, var(--Soft-blue));
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        /*flex*/
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /*font*/
+        font-family: 'Kumbh Sans', sans-serif;
+        /*size*/
+        width: 100vw;
+        min-height: 100vh;
+    }
+    
+    .illustration {
+        /*image*/
+        background-image: url(./../images/illustration-woman-online-mobile.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        /*postion*/
+        position: relative;
+        top: calc((90/var(--one-vh))*1vh);
+        right: calc((15/var(--one-vw))*1vw);
+        margin-top: calc((90/var(--one-vh))*-1vh);
+        /*size*/
+        width: calc((266/var(--one-vw))*1vw);
+        height: calc((196/var(--one-vh))*1vh);
+    }
+    
+    .bg-pattern {
+        /*image*/
+        background-image: url(./../images/bg-pattern-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        /*size*/
+        width: calc((240/var(--one-vw))*1vw);
+        height: calc((104/var(--one-vh))*1vh);
+        /*space*/
+        margin: auto;
+    }
+    
+    .container {
+        background-color: white;
+        border-radius: var(--radius);
+        /*box-shadow*/
+        box-shadow: 0 20px 20px -5px rgba(0, 0, 0, 0.3);
+        /*space*/
+        padding-right: calc((24/var(--one-vw))*1vw);
+        padding-left: calc((24/var(--one-vw))*1vw);
+        padding-bottom: calc((48/var(--one-vh))*1vh);
+        /*size*/
+        box-sizing: border-box;
+        width: calc((327/var(--one-vw))*1vw);
+    }
+    
+    .title-QA {
+        /*spaces*/
+        margin-top: calc((34/var(--one-vh))*1vh);
+        margin-bottom: calc((43/var(--one-vh))*1vh);
+        /*text*/
+        text-align: center;
+        font-size: calc((35/var(--one-vw))*1vw);
+        font-weight: 700;
+    }
+    
+    .pairQA {
+        border-bottom: var(--Light-grayish-blue) 1px solid;
+    }
+    
+    .question {
+        /*flex*/
+        display: flex;
+        flex-direction: row;
+        align-content: space-between;
+        justify-content: space-between;
+        /*spaces*/
+        margin-top: calc((19/var(--one-vh))*1vh);
+        margin-bottom: calc((16/var(--one-vh))*1vh);
+        /*text*/
+        color: var(--Very-dark-grayish-blue);
+        font-weight: normal;
+        font-size: calc((14/var(--one-vw))*1vw);
+    }
+    
+    .question:hover {
+        color: var(--Soft-red);
+        cursor: pointer;
+    }
+    
+    .question-open {
+        /*text*/
+        font-weight: 700;
+        color: black;
+    }
+    
+    .answer {
+        display: none;
+    }
+    
+    .img-arrow {
+        display: inline-block;
+        /*image*/
+        background-image: url(./../images/icon-arrow-down.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        /*size*/
+        width: 10px;
+        height: 7px;
+    }
+    
+    .img-arrow-up {
+        /*flip vertical*/
+        -webkit-transform: scaleY(-1);
+        transform: scaleY(-1);
+    }
+    
+    .answer {
+        /*text*/
+        color: var(--Dark-grayish-blue);
+        font-size: calc((12/var(--one-vw))*1vw);
+    }
+    /*~ frontend mentor ~*/
+    
+    .attribution {
+        /*space*/
+        padding-top: 20px;
+        /*text*/
+        font-size: calc((11/var(--one-vw))*1vw);
+        text-align: center;
+        color: black;
+    }
+    
+    .attribution a {
+        color: white;
+    }
+    
+    .attribution a:hover {
+        color: var(--Soft-red);
+    }
+    /*-----------Desktop-------------*/
+    
+    @media only screen and (min-width: 1100px) {
+        .illustration {
+            display: none;
+        }
+        .container {
+            /*flex*/
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            /*hide*/
+            overflow: hidden;
+            /*size*/
+            box-sizing: border-box;
+            width: calc((920/var(--one-vw-desktop))*1vw);
+            min-height: calc((511/var(--one-vh-desktop))*1vh);
+            /*space*/
+            padding: 0;
+        }
+        .images {
+            position: relative;
+        }
+        .bg-pattern {
+            /*image*/
+            background-image: url(./../images/bg-pattern-desktop.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right;
+            /*postion*/
+            position: relative;
+            right: 50%;
+            bottom: 10vh;
+            /*size*/
+            width: calc((391/var(--one-vw-desktop))*1vw);
+            height: calc((511/var(--one-vh-desktop))*1vh);
+            transform: scale(1.75, 1.75);
+        }
+        .illustration-desktop {
+            z-index: 1;
+            /*image*/
+            background-image: url(./../images/illustration-woman-online-desktop.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: right;
+            /*postion*/
+            position: absolute;
+            top: 10vh;
+            top: 15%;
+            right: 12%;
+            /*size*/
+            width: calc((472/var(--one-vw-desktop))*1vw);
+            height: calc((359/var(--one-vh-desktop))*1vh);
+        }
+        .illustration-box {
+            z-index: 2;
+            /*image*/
+            background-image: url(./../images/illustration-box-desktop.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            /*postion*/
+            position: absolute;
+            top: 44%;
+            left: 11%;
+            /*size*/
+            width: calc((191/var(--one-vw-desktop))*1vw);
+            height: calc((184/var(--one-vh-desktop))*1vh);
+        }
+        .illustration-box-side {
+            left: 9%;
+        }
+        .Q-and-A {
+            /*space*/
+            margin: 0;
+            margin-right: calc((95/var(--one-vw-desktop))*1vw);
+            margin-left: calc((86/var(--one-vw-desktop))*1vw);
+            /*size*/
+            width: 400px;
+        }
+        .title-QA {
+            /*space*/
+            margin-top: 34px;
+            margin-bottom: 43px;
+            /*text*/
+            text-align: center;
+            font-size: 35px;
+            font-weight: 700;
+        }
+        .question {
+            /*space*/
+            margin-top: 19px;
+            margin-bottom: 16px;
+            /*text*/
+            font-size: 14px;
+        }
+        .question-open {
+            /*text*/
+            font-weight: 700;
+            color: black;
+        }
+        .answer {
+            font-size: 12px;
+        }
+        /*~ frontend mentor ~*/
+        .attribution {
+            /*postion*/
+            position: absolute;
+            bottom: 0;
+            /*space*/
+            padding: 10px;
+            /*text*/
+            font-size: 11px;
+        }
+    }
